@@ -1,0 +1,21 @@
+<h1>Listing user_names</h1>
+
+<table>
+  <tr>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @user_names.each do |user_name| %>
+  <tr>
+    <td><%= link_to 'Show', user_name %></td>
+    <td><%= link_to 'Edit', edit_user_name_path(user_name) %></td>
+    <td><%= link_to 'Destroy', user_name, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New User name', new_user_name_path %>
